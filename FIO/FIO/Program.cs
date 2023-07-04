@@ -44,7 +44,7 @@ namespace FIO
             Console.WriteLine("Введите ссылку на ваш github:");
             string github = IsValid(gitPattern);
 
-            Console.WriteLine("Ваши данные:\n" + $"{fio}, {email}, {github}");
+            Console.WriteLine( "Ваши данные:\n" + $"{fio}, {email}, {github}");
             Console.ReadLine();
         }
     }
