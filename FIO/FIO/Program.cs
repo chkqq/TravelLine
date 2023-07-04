@@ -32,11 +32,15 @@ namespace FIO
         {
 
             string fioPattern = @"^[а-яА-Яa-zA-Z]{2,30}( [а-яА-Яa-zA-Z]{2,30}){2}$";
+            string agePattern = @"^(?:[1-9]|[1-9][0-9]|1[0-2][0-9]|130)$";
             string emailPattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
             string gitPattern = @"^https:\/\/github\.com\/[a-zA-Z0-9_-]{2,30}$";
 
             Console.WriteLine("Введите ваше ФИО:");
             string fio = IsValid(fioPattern);
+
+            Console.WriteLine("Введите ваш возраст:");
+            string age = IsValid(agePattern);
 
             Console.WriteLine("Введите ваш email(*@****.**):");
             string email = IsValid(emailPattern);
@@ -44,7 +48,7 @@ namespace FIO
             Console.WriteLine("Введите ссылку на ваш github:");
             string github = IsValid(gitPattern);
 
-            Console.WriteLine( "Ваши данные:\n" + $"{fio}, {email}, {github}");
+            Console.WriteLine( "Ваши данные:\n" + $"{fio}, {age}, {email}, {github}");
             Console.ReadLine();
         }
     }
