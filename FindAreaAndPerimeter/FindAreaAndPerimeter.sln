@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindAreaAndPerimeter", "FindAreaAndPerimeter\FindAreaAndPerimeter.csproj", "{57948397-8639-4617-A614-6ABD8853BBDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindAreaAndPerimeter", "ConsoleApp1\FindAreaAndPerimeter.csproj", "{1721FD9A-7A1A-4DFD-8A75-11985687FE14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{1721FD9A-7A1A-4DFD-8A75-11985687FE14}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindArrayAndPerimeterTest", "FindArrayAndPerimeterTest\FindArrayAndPerimeterTest.csproj", "{790AED79-DF0F-403F-B86C-E5B96902CEFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindAreaAndPerimeterTest", "FindAreaAndPerimeterTest\FindAreaAndPerimeterTest.csproj", "{1EE6C439-211B-44DB-A550-29E2374930DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{57948397-8639-4617-A614-6ABD8853BBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57948397-8639-4617-A614-6ABD8853BBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57948397-8639-4617-A614-6ABD8853BBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57948397-8639-4617-A614-6ABD8853BBDC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1721FD9A-7A1A-4DFD-8A75-11985687FE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1721FD9A-7A1A-4DFD-8A75-11985687FE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1721FD9A-7A1A-4DFD-8A75-11985687FE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1721FD9A-7A1A-4DFD-8A75-11985687FE14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{790AED79-DF0F-403F-B86C-E5B96902CEFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{790AED79-DF0F-403F-B86C-E5B96902CEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{790AED79-DF0F-403F-B86C-E5B96902CEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{790AED79-DF0F-403F-B86C-E5B96902CEFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EE6C439-211B-44DB-A550-29E2374930DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EE6C439-211B-44DB-A550-29E2374930DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EE6C439-211B-44DB-A550-29E2374930DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EE6C439-211B-44DB-A550-29E2374930DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

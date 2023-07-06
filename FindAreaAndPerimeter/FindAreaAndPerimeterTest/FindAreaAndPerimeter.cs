@@ -1,6 +1,6 @@
 using ConsoleApp1;
 
-namespace FindArrayAndPerimeterTest
+namespace FindAreaAndPerimeterTest
 {
     public class FindArrayAndPerimeterTests
     {
