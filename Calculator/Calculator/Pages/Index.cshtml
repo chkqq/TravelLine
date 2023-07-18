@@ -1,0 +1,62 @@
+﻿@page
+@{
+}
+@{
+    ViewData["Title"] = "Arithmetic Calculator";
+}
+
+<h1>Калькулятор</h1>
+
+<form method="post">
+    <label for="number1">Number 1:</label>
+    <input type="number" name="number1" id="number1" required>
+
+    <label for="number2">Number 2:</label>
+    <input type="number" name="number2" id="number2" required>
+
+    <label for="operator">Operator:</label>
+    <select name="operator" id="operator" required>
+        <option value="+">+</option>
+        <option value="-">-</option>
+  @*      <option value="*">*</option>
+        <option value="/">/</option>*@
+    </select>
+
+    <input type="submit" value="Calculate">
+</form>
+
+@if (HttpContext.Request.Method == "POST")
+{
+    int number1 = Convert.ToInt32(Request.Form["number1"]);
+    int number2 = Convert.ToInt32(Request.Form["number2"]);
+    string selectedOperator = Request.Form["operator"];
+    int result = 0;
+
+    switch (selectedOperator)
+    {
+        case "+":
+            result = number1 + number2;
+            break;
+        case "-":
+            result = number1 - number2;
+            break;
+ @*       case "*":
+            result = number1 * number2;
+            break;
+        case "/":
+            result = number1 / number2;
+            break;*@
+    }
+
+    <h2>Результат:</h2>
+    <p>@number1 @selectedOperator @number2 = @result</p>
+    <div class="column-calculations">
+        <p class="operator">@selectedOperator</p>
+        <div class="numbers-and-line" >
+            <p class="number" id="number">@number1</p>
+            <p class="number" id="number2">@number2</p>
+            <div class="line"></div>
+            <p class="number">@result</p>
+        </div>
+    </div>
+}
