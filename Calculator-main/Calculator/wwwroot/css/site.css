@@ -45,8 +45,7 @@ body {
 
 .residue {
     text-align: right;
-    font: 400 normal 17.5px/20px 'Lobster';
-    letter-spacing: 0.4em;
+    font: 400 normal 35px/20px 'Lobster';
 }
 .all {
     display: flex;
