@@ -45,13 +45,13 @@ body {
 
 .residue {
     text-align: right;
-    font: 400 normal 35px/20px 'Lobster';
+    font: 400 normal 35px/40px monospace;
 }
 .all {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    font: 400 normal 35px/40px 'Lobster';
+    font: 400 normal 35px/40px monospace;
     width: 380px;
     background-image: url("../img/tetr.png")
 
