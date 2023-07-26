@@ -1,0 +1,24 @@
+.slider {
+    width: 500px;
+    margin: 20px;
+    display: flex;
+    
+  }
+  
+  /* Стили для ползунка */
+  .slider-input {
+    width: 266px;
+  }
+  
+  /* Стили для значения ползунка */
+  .slider-output {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  .slider-text {
+    font-size: 24.2px;
+    margin-top: 5px;
+  }

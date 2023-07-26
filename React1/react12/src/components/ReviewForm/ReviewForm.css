@@ -1,0 +1,29 @@
+.review-form__box {
+    width: 500px;
+    margin: 230px auto 176px auto;
+    color: #404040;
+    font: 600 30px Inter;
+    position: relative;
+}
+
+.review-form__text {
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0.015em;
+    text-align:center
+}
+
+.review-form__mark {
+    position: absolute;
+    padding-left: 530px;
+    font-size: 45px;
+}
+
+.review-form__button {
+    padding: 10px 20px;
+    margin-left: 360px;
+}
+
+.review-form__text-area-button{
+    margin-left: 22px;
+}

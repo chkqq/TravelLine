@@ -1,0 +1,77 @@
+body {
+  color: #404040;
+  font: 600 30px Inter;
+}
+
+
+.reply-text {
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0.015em;
+  text-align:center
+}
+.main-box {
+  width: 500px;
+  margin: 250px auto;
+}
+
+.slider {
+  width: 500px;
+  margin: 20px;
+  display: flex;
+  
+}
+
+/* Стили для ползунка */
+.slider-input {
+  width: 266px;
+}
+
+/* Стили для значения ползунка */
+.slider-output {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.slider-text {
+  font-size: 24.2px;
+  margin-top: 5px;
+}
+
+.evaluation {
+  position: absolute;
+  padding-left: 1210px;
+  font-size: 50px;
+  padding-top: 30px;
+}
+
+.review-comment {
+
+}
+
+.review-comment-text {
+  margin: 0 25px 0 25px;
+}
+
+.review-comment-button {
+  background-color: #1E65B7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 369px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 120px;
+}
+
+.review-comment-button:hover {
+  background-color: #004B99; 
+}
+
+.review-comment-button:focus {
+  outline: none; 
+}
