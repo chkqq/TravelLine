@@ -4,21 +4,30 @@
     {
         private double _side;
 
+        public double Side
+        {
+            get { return _side; }
+            private set
+            {
+                if (value <= 0)
+                    throw new ArgumentException("Сторона квадрата может быть только положительной длинны.");
+                _side = value;
+            }
+        }
+
         public Square(double side)
         {
-            _side = side;
+            Side = side;
         }
 
         public double CalculateArea()
         {
-            double area = _side * _side;
-            return area;
+            return Side * Side;
         }
 
         public double CalculatePerimeter()
         {
-            double perimeter = _side * 4;
-            return perimeter;
+            return 4 * Side;
         }
     }
 }

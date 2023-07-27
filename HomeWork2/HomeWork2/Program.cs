@@ -10,6 +10,8 @@ namespace FindAreaAndPerimeter
     {
         static void Main(string[] args)
         {
+            Triangle triangle = new Triangle(-1, -1, 3);
+
         }
     }
 }

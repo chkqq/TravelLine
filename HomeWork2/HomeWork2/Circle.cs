@@ -6,24 +6,31 @@ namespace FindAreaAndPerimeter
     {
         private double _radius;
 
-        public Circle(double radius)
+        public double Radius
         {
-            _radius = radius;
+            get { return _radius; }
+
+            private set
+            {
+                if (value <= 0)
+                    throw new ArgumentException("Радиус круга должен быть положительным");
+                _radius = value;
+            }
         }
 
+        public Circle(double radius)
+        {
+            Radius = radius;
+        }
         public double CalculateArea()
         {
-
-            double area = Math.PI * _radius * _radius;
-            return area;
-
+            return Math.PI * Radius * Radius;
         }
 
         public double CalculatePerimeter()
         {
 
-            double perimiter = 2 * Math.PI * _radius;
-            return perimiter;
+            return 2 * Math.PI * Radius;
 
         }
     }
