@@ -13,12 +13,12 @@ namespace FIO
         {
             string data = "";
             Regex regex = new Regex(pattern);
-            bool isInCorrect = true;
-            while(isInCorrect) { 
+            bool isCorrect = false;
+            while(isCorrect) { 
                 data = Console.ReadLine();
                 if(regex.IsMatch(data))
                 {
-                   isInCorrect = false;
+                   isCorrect = true;
                 }
                 else
                 {
@@ -38,6 +38,7 @@ namespace FIO
 
             Console.WriteLine("Введите ваше ФИО:");
             string fio = IsValid(fioPattern).Replace(" ", Environment.NewLine);
+
             Console.WriteLine("Введите ваш возраст:");
             string age = IsValid(agePattern);
 
