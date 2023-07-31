@@ -9,6 +9,7 @@ namespace Core.Models
         public int HorsePower { get; set; }
         public string TypeOfRepair { get; set; } = string.Empty;
         public List<CarMechanic> CarMechanics { get; set; } = new List<CarMechanic>();
+        
         public override string ToString()
         {
             return $"{CarId}) {CarName} {HorsePower} - {TypeOfRepair}";
