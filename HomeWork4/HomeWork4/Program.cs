@@ -13,6 +13,7 @@ namespace HospitalDb
         private static ICarRepository _carRepository;
         private static IClientRepository _clientRepository;
         private static ICarMechanicRepository _carMechanicRepository;
+        
         public static void Main(string[] args)
         {
             _applicationContext = new ApplicationContext(connectionString);
@@ -22,7 +23,8 @@ namespace HospitalDb
             PrintCommandsList();
             ProcessComands();
         }
-        static void PrintCommandsList()
+        
+        private static void PrintCommandsList()
         {
             Console.WriteLine("Available commands:");
             Console.WriteLine("\tadd-car [carName] [horsePower] [TypeOfRepair]");
@@ -38,7 +40,8 @@ namespace HospitalDb
             Console.WriteLine("\tlist-carMechanic-by-client [clientId]");
             Console.WriteLine("\texit");
         }
-        static void ProcessComands()
+        
+        private static void ProcessComands()
         {
             while (true)
             {
@@ -89,7 +92,8 @@ namespace HospitalDb
                 }
             }
         }
-        static void AddCar(List<string> parameters)
+        
+        private static void AddCar(List<string> parameters)
         {
             Car car = new()
             {
@@ -100,7 +104,8 @@ namespace HospitalDb
             _carRepository?.Add(car);
             _carRepository?.SaveChanges();
         }
-        static void RemoveCar(List<string> parameters)
+        
+        private static void RemoveCar(List<string> parameters)
         {
             int carId = int.Parse(parameters[0]);
             Car? car = _carRepository.GetById(carId);
@@ -110,7 +115,8 @@ namespace HospitalDb
                 _carRepository.SaveChanges();
             }
         }
-        static void AddClient(List<string> parameters)
+        
+        private static void AddClient(List<string> parameters)
         {
             Client client = new()
             {
@@ -120,7 +126,8 @@ namespace HospitalDb
             _clientRepository.Add(client);
             _clientRepository.SaveChanges();
         }
-        static void RemoveClient(List<string> parameters)
+        
+        private static void RemoveClient(List<string> parameters)
         {
             int clientId = int.Parse(parameters[0]);
             Client? client = _clientRepository.GetById(clientId);
@@ -130,7 +137,8 @@ namespace HospitalDb
                 _clientRepository.SaveChanges();
             }
         }
-        static void AddCarMechanic(List<string> parameters)
+        
+        private static void AddCarMechanic(List<string> parameters)
         {
             int repairCost = int.Parse(parameters[0]);
             int carId = int.Parse(parameters[1]);
@@ -151,7 +159,8 @@ namespace HospitalDb
                 _carMechanicRepository.SaveChanges();
             }
         }
-        static void RemoveCarMechanic(List<string> parameters)
+        
+        private static void RemoveCarMechanic(List<string> parameters)
         {
             int receptionId = int.Parse(parameters[0]);
             CarMechanic? reception = _carMechanicRepository.GetById(receptionId);
@@ -161,24 +170,29 @@ namespace HospitalDb
                 _carMechanicRepository.SaveChanges();
             }   
         }
-        static void ListCars()
+        
+        private static void ListCars()
         {
             _carRepository.GetAll().ForEach((car) => Console.WriteLine(car));
         }
-        static void ListClients()
+        
+        private static void ListClients()
         {
             _clientRepository.GetAll().ForEach((client) => Console.WriteLine(client));
         }
-        static void ListCarMechanics()
+        
+        private static void ListCarMechanics()
         {
             _carMechanicRepository.GetAll().ForEach((carMechanic) => Console.WriteLine(carMechanic));
         }
-        static void ListCarMechanicsByCar(List<string> parameters)
+        
+        private static void ListCarMechanicsByCar(List<string> parameters)
         {
             int carId = int.Parse(parameters[0]);
             _carMechanicRepository.GetByCarId(carId).ForEach((carMechanic) => Console.WriteLine(carMechanic));
         }
-        static void ListCarMechanicsByClient (List<string> parameters)
+        
+        private static void ListCarMechanicsByClient (List<string> parameters)
         {
             int clientId = int.Parse(parameters[0]);
             _carMechanicRepository.GetByClientId(clientId).ForEach((carMechanic) => Console.WriteLine(carMechanic));
