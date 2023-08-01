@@ -1,3 +1,4 @@
+import "./style.css";
 const resultContainer = document.getElementById("resultContainer");
 const resultOutput = document.getElementById("result");
 
