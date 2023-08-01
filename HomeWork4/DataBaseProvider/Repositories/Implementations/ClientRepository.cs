@@ -12,7 +12,7 @@ namespace DatabaseProvider.Repositories.Implementations
             return Entities.ToList();
         }
         
-        public Client? GetById(int id)
+        public Client GetById(int id)
         {
             return Entities.FirstOrDefault(p => p.ClientId == id);
         }
