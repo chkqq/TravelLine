@@ -33,7 +33,7 @@ namespace BubbleSort
             string input = Console.ReadLine();
             char[] inputArray = input.ToCharArray();
             char[] outputArray = BubbleSort(inputArray);
-            Console.WriteLine(new string(outputArray));
+            Console.WriteLine(outputArray);
             Console.ReadLine();
         }
     }
