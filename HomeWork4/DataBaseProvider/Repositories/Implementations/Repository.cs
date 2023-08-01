@@ -5,7 +5,7 @@ namespace DatabaseProvider.Repositories.Implementations
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        public DbSet<TEntity> Entities { get; 
+        public DbSet<TEntity> Entities { get; }
                                        
         private readonly ApplicationContext _context;
                                         
