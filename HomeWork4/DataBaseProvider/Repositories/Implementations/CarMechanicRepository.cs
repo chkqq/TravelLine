@@ -13,7 +13,7 @@ namespace DatabaseProvider.Repositories.Implementations
             return Entities.ToList();
         }
         
-        public CarMechanic? GetById(int id)
+        public CarMechanic GetById(int id)
         {
             return Entities.FirstOrDefault(r => r.CarMechanicId == id);
         }
