@@ -10,11 +10,10 @@ namespace BubbleSort
     {
         public static char[] BubbleSort(char[] Arr)
         {
-            bool isSorted = false;
-            while (!isSorted)
+            bool hasSwapped;
+            do
             {
-                isSorted = true;
-
+                hasSwapped = false;
                 for (int i = 0; i < Arr.Length - 1; i++)
                 {
                     if (Arr[i] > Arr[i + 1])
@@ -22,18 +21,19 @@ namespace BubbleSort
                         char temp = Arr[i];
                         Arr[i] = Arr[i + 1];
                         Arr[i + 1] = temp;
-                        isSorted = false;
+                        hasSwapped = true;
                     }
                 }
-            }
+            } while (hasSwapped);
+            
             return Arr;
         }
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
             char[] inputArray = input.ToCharArray();
-            inputArray = BubbleSort(inputArray);
-            Console.WriteLine(inputArray);
+            char[] outputArray = BubbleSort(inputArray);
+            Console.WriteLine(new string(outputArray));
             Console.ReadLine();
         }
     }
