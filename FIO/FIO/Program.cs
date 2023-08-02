@@ -14,7 +14,8 @@ namespace FIO
             string data = "";
             Regex regex = new Regex(pattern);
             bool isCorrect = false;
-            while(!isCorrect) { 
+            while(!isCorrect) 
+            { 
                 data = Console.ReadLine();
                 if(regex.IsMatch(data))
                 {
