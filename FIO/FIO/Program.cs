@@ -18,7 +18,7 @@ namespace FIO
                 data = Console.ReadLine();
                 if(regex.IsMatch(data))
                 {
-                   isCorrect = true;
+                    isCorrect = true;
                 }
                 else
                 {
