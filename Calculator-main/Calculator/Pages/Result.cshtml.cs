@@ -53,23 +53,38 @@ namespace Calculator.Pages
             }
         }
         private void Addition()
-        { 
-            if(SecondNumber.Length > FirstNumber.Length)
+        {
+            if (SecondNumber.Length > FirstNumber.Length)
             {
-                (FirstNumber, SecondNumber) = (SecondNumber, FirstNumber); 
+                (FirstNumber, SecondNumber) = (SecondNumber, FirstNumber);
             }
-
 
             if (Result.Length == 0)
             {
                 Result = "0";
             }
 
-
-            long result = long.Parse(FirstNumber) + long.Parse(SecondNumber);
-            Result = result.ToString();
-            
+            if (long.TryParse(FirstNumber, out long num1) && long.TryParse(SecondNumber, out long num2))
+            {
+                try
+                {
+                    checked
+                    {
+                        long result = num1 + num2;
+                        Result = result.ToString();
+                    }
+                }
+                catch (OverflowException)
+                {
+                    Result = "Overflow";
+                }
+            }
+            else
+            {
+                Result = "Invalid numbers";
+            }
         }
+
         
         private void Subtraction()
         {
