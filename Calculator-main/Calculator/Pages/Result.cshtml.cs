@@ -17,12 +17,27 @@ namespace Calculator.Pages
 
         public void OnGet(string firstNumber, string secondNumber, string operation)
         {
+            if (string.IsNullOrEmpty(firstNumber) || !long.TryParse(firstNumber, out _))
+            {
+                throw new ArgumentException("Invalid firstNumber");
+            }
+
+            if (string.IsNullOrEmpty(secondNumber) || !long.TryParse(secondNumber, out _))
+            {
+                throw new ArgumentException("Invalid secondNumber");
+            }
+
+            if (string.IsNullOrEmpty(operation) || (operation != "addition" && operation != "subtraction"))
+            {
+                throw new ArgumentException("Invalid operation");
+            }
+
             FirstNumber = firstNumber;
             SecondNumber = secondNumber;
             Operation = operation;
             Proceed();
-
         }
+        
         private void Proceed()
         {
             switch (Operation)
