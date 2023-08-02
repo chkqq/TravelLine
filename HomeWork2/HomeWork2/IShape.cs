@@ -4,6 +4,5 @@
     {
         double CalculateArea();
         double CalculatePerimeter();
-
     }
 }
